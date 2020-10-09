@@ -27,7 +27,14 @@ int main(void){
                 }
         }
         
-    
+        
+        choice=rand()%3;
+   if(door[(choice+1)%3]==0&&door[(choice+2)%3]==1||door[(choice+2)%3]==0&&door[(choice+1)%3]==1){
+   
+      winsbyswitch++;
     }
 }
+         float probability=(float)winsbyswitch*100.0/(float)i;
+        printf("After %u trials , won = %u , the Probability of winning the game by switching is %f. ",n,winsbyswitch,probability);
+        
 }
